@@ -1,0 +1,51 @@
+// banking section start 
+.banking-section {
+    padding-bottom: 96px;
+}
+.banking__list {
+    @include display($items:center, $justify:space-between, $gap:10px);
+}
+.banking__item {
+    max-width: 350px;
+    text-align: center;
+}
+.banking__item > h2{
+    margin-top: 32px;
+    font-family: 'Public Sans';
+    @include textStyle($CLR:#36536B, $FS:18px, $FW:700, $LH:25px, $MB:16px);
+}
+.banking__item > p{
+    @include textStyle($CLR:#36536B, $FS:15px, $FW:400, $LH:25px, $MB:0px);
+}
+
+// -------- Tablet start 
+@media (max-width:930px) {
+    .banking-section {
+        padding-bottom: 100px;
+    }
+    .banking__item {
+        max-width: 223px;
+    }   
+    .banking__item > img{
+        width: 88px;
+        height: 88px;
+    }
+}
+
+// -------- Mobile start 
+@media (max-width:735px) {
+    .banking-section {
+        padding-bottom: 80px;
+    }
+    .banking__list {
+        flex-direction: column;
+        @include display($items:center, $justify:center, $gap:48px);
+    }
+    .banking__item {
+        max-width: 328px;
+    }   
+    .banking__item > img{
+        width: 106px;
+        height: 106px;
+    }
+}
